@@ -53,6 +53,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.21-x64-mingw32)
+    ffi (1.9.21-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.4)
@@ -77,7 +78,10 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2-x64-mingw32)
       mini_portile2 (~> 2.3.0)
-    pg (0.19.0-x64-mingw32)
+    nokogiri (1.8.2-x86-mingw32)
+      mini_portile2 (~> 2.3.0)
+    pg (0.21.0-x64-mingw32)
+    pg (0.21.0-x86-mingw32)
     puma (3.11.2)
     rack (2.0.4)
     rack-test (0.6.3)
@@ -150,13 +154,14 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
-  pg (~> 0.18)
+  pg (~> 0.21.0)
   puma (~> 3.0)
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
