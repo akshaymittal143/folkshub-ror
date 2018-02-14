@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
     autoprefixer-rails (8.0.0)
       execjs
@@ -49,6 +51,14 @@ GEM
       sass (>= 3.3.4)
     bootstrap_form (2.7.0)
     builder (3.2.3)
+    capybara (2.18.0)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (>= 2.0, < 4.0)
+    cliver (0.3.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -64,12 +74,19 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
+      railties (>= 3.0.0)
     ffi (1.9.21-x64-mingw32)
     ffi (1.9.21-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    headless (2.3.1)
     i18n (0.9.4)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -97,6 +114,11 @@ GEM
     orm_adapter (0.5.0)
     pg (0.21.0-x64-mingw32)
     pg (0.21.0-x86-mingw32)
+    poltergeist (1.17.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
+    public_suffix (3.0.2)
     puma (3.11.2)
     rack (2.0.4)
     rack-test (0.6.3)
@@ -113,6 +135,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.0.6)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -131,6 +157,23 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-rails (3.7.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.1)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -171,22 +214,31 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    xpath (3.0.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   bootstrap_form
   byebug
+  capybara
   coffee-rails (~> 4.2)
   devise
+  factory_girl_rails
+  headless
   jbuilder (~> 2.5)
   jquery-rails
   pg (~> 0.21.0)
+  poltergeist
   puma (~> 3.0)
   rails (~> 5.0.0)
+  rails-controller-testing
+  rspec-rails (~> 3.6)
   sass-rails (~> 5.0)
   turbolinks (~> 5)
   tzinfo-data
