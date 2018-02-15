@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-    @post = Post.find(params[:id])
-
+    def show
+        @post = Post.find(params[:id])        
+    end
+    
     def hobby
         posts_for_branch(params[:action])
       end
